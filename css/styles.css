@@ -1,0 +1,26 @@
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+h1{
+	text-align: center;
+	margin-top: 80px;
+}
+
+body{
+    text-align: center;
+}
+
+.storyline-container 
+{
+    text-align: center;
+}
