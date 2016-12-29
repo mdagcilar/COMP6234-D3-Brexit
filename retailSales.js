@@ -6,7 +6,7 @@
 
 
 
-var margin = {top: 30, right: 50, bottom: 30, left: 50},
+var margin = {top: 30, right: 60, bottom: 30, left: 60},
     width = 600 - margin.left - margin.right,
     height = 270 - margin.top - margin.bottom;
 
@@ -83,14 +83,14 @@ d3.csv("resources/retail_sales_2011.csv", function(error, data) {
 
 
   svg.append("text")
-    .attr("transform", "translate(" + (width/2 -18) + "," + height/1.24 + ")")
+    .attr("transform", "translate(" + (width/2 -60) + "," + height/1.24 + ")")
     .attr("dy", ".35em")
     .attr("text-anchor", "start")
     .style("fill", "steelblue")
     .text("Average Weekly Total Retailing");
 
   svg.append("text")
-    .attr("transform", "translate(" + (width/2 -18) + "," + height/1.1 + ")")
+    .attr("transform", "translate(" + (width/2 -60) + "," + height/1.1 + ")")
     .attr("dy", ".35em")
     .attr("text-anchor", "start")
     .style("fill", "red")
