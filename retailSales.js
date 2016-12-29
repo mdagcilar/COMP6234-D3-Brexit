@@ -96,5 +96,11 @@ d3.csv("resources/retail_sales_2011.csv", function(error, data) {
     .style("fill", "red")
     .text("Average Weekly Internet Retailing");
 
-
+  svg.append("svg:line")
+    .attr("x1", width*0.95)
+    .attr("x2", width*0.95)
+    .attr("y1", height)
+    .attr("y2", 0)
+    .style("stroke", "black")
+    .style("stroke-width", 0.6)
 });
