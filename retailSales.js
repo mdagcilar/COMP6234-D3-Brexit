@@ -83,14 +83,14 @@ d3.csv("resources/retail_sales_2011.csv", function(error, data) {
 
 
   svg.append("text")
-    .attr("transform", "translate(" + (width/2) + "," + height/1.38 + ")")
+    .attr("transform", "translate(" + (width/2 -18) + "," + height/1.24 + ")")
     .attr("dy", ".35em")
     .attr("text-anchor", "start")
     .style("fill", "steelblue")
     .text("Average Weekly Total Retailing");
 
   svg.append("text")
-    .attr("transform", "translate(" + (width/2) + "," + height/1.2 + ")")
+    .attr("transform", "translate(" + (width/2 -18) + "," + height/1.1 + ")")
     .attr("dy", ".35em")
     .attr("text-anchor", "start")
     .style("fill", "red")
