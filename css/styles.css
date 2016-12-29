@@ -12,15 +12,40 @@ path {
     shape-rendering: crispEdges;
 }
 h1{
+    font-family: "Arial Black", Gadget, sans-serif;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 40px;
+}
+h2{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -10px;
+    font-weight:normal
 }
 
 body{
+    font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
+}
+
+p{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .storyline-container 
 {
     text-align: center;
 }
+
+.header{
+        width: 110%;
+        background-color: rgb(63,96,127);
+        height: 100px;
+        margin-top: -10px;
+        margin-left: -10px;
+     }
