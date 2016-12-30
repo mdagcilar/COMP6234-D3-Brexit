@@ -39,6 +39,10 @@ p{
 
 .storyline-container 
 {
+    margin: auto 0px;
+}
+
+#map{
     text-align: center;
 }
 
@@ -49,3 +53,35 @@ p{
         margin-top: -10px;
         margin-left: -10px;
      }
+
+.area{ 
+    fill: #f8e5c2;
+    stroke: none;
+}
+
+.boundary {
+    fill: none;
+    stroke: #777;
+}
+
+.selected {
+    fill: #ff7f7f;
+    stroke: #777;
+    stroke-dasharray: 2,2;
+    stroke-linejoin: round;
+}
+
+#data_table {
+    margin: 0 auto;
+    height: 600px;
+    width:50%;
+    border-collapse:collapse;
+}
+
+#data_table th, td {
+  font-weight:normal
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+

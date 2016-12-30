@@ -104,3 +104,4 @@ d3.csv("resources/retail_sales_2011.csv", function(error, data) {
     .style("stroke", "black")
     .style("stroke-width", 0.6)
 });
+
