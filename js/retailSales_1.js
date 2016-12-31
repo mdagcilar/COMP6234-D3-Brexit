@@ -33,7 +33,7 @@ var valueline2 = d3.svg.line()
   .x(function(d) { return x(d.date); })
   .y(function(d) { return y1(d.average_weekly_internet_retailing); });
   
-var svg = d3.select("#chart1")
+var svg1 = d3.select("#chart2")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -57,46 +57,46 @@ d3.csv("resources/retail_sales_2011.csv", function(error, data) {
     return Math.max(d.average_weekly_internet_retailing); })]);
 
 
-  svg.append("path")    // Add the valueline path.
+  svg1.append("path")    // Add the valueline path.
     .attr("class", "line")
     .attr("d", valueline(data));
 
-  svg.append("path")    // Add the valueline2 path.
+  svg1.append("path")    // Add the valueline2 path.
     .attr("class", "line")
     .style("stroke", "red")
     .attr("d", valueline2(data));
 
-  svg.append("g")     // Add the X Axis
+  svg1.append("g")     // Add the X Axis
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis);
 
-  svg.append("g")     // Add the Y Axis
+  svg1.append("g")     // Add the Y Axis
     .attr("class", "y axis")
     .call(yAxisLeft);
 
-  svg.append("g")     // Add the Y Axis
+  svg1.append("g")     // Add the Y Axis
     .attr("class", "y axis")
     .attr("transform", "translate(" + width + ", 0)")
     .style("fill", "red")
     .call(yAxisRight);
 
 
-  svg.append("text")
+  svg1.append("text")
     .attr("transform", "translate(" + (width/2 -60) + "," + height/1.24 + ")")
     .attr("dy", ".35em")
     .attr("text-anchor", "start")
     .style("fill", "steelblue")
     .text("Average Weekly Total Retailing");
 
-  svg.append("text")
+  svg1.append("text")
     .attr("transform", "translate(" + (width/2 -60) + "," + height/1.1 + ")")
     .attr("dy", ".35em")
     .attr("text-anchor", "start")
     .style("fill", "red")
     .text("Average Weekly Internet Retailing");
 
-  svg.append("svg:line")
+  svg1.append("svg:line")
     .attr("x1", width*0.95)
     .attr("x2", width*0.95)
     .attr("y1", height)
