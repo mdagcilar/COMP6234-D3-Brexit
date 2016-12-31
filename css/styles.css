@@ -73,7 +73,6 @@ p{
 
 #data_table {
     margin: 0 auto;
-    height: 600px;
     width:50%;
     border-collapse:collapse;
 }
@@ -84,4 +83,12 @@ p{
   border-bottom:1px solid #e5e5e5;
 }
 
+/*#house_price_map{
+    width: 400px;
+    height: 400px;
+}
 
+#chart3{
+    width: 800px;
+    height: 661px;
+}
