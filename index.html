@@ -3,25 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<title>COMP6234 Brexit Analysis</title>
-	 <script src="http://d3js.org/d3.v3.min.js"></script>
+	
+	<!-- scripts -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<!-- css -->
 	<link href="css/demo.css" rel="stylesheet" media="all">
 	<link href="css/styles.css" rel="stylesheet">
+
 	<div class="header"></div>
 </head>
 
 <body>
-  <h1>What's Really The Effect Of Brexit?</h1>
-  <h2>COMP6234 - January 11, 2017 </h2>
+  	<h1>What's Really The Effect Of Brexit?</h1>
+  	<h2>COMP6234 - January 11, 2017 </h2>
 
-  <p>This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an Introduction This is an </p>
+	<!-- Introduction -->
+  	<div id="intro">Below are articles published by different news outlets describing how Brexit has had a negative impact on these wide range of economic issues. The value of the pound has dropped significantly by about 18% since the referendum result. However, have these other issues such as umemployment been negatively affected and so soon after the result? Scroll down to see how data collected from the Office for National Statistics (ONS) contradicts these articles by displaying real up to date statisics.
+  	</div>
+	
 
-	<div id="mainBubble"></svg>
+	<!-- Article Bubble Chart -->
+	<div id="mainBubble">
   		<script src=js/article_bubble_chart.js type="text/javascript"></script>
  		 </div>
   
-
+	<!-- Navigation panel -->
 	<ul id="nav">
-		<li class="current"><a href="#chart1">Chart 1</a></li>
+		<li><a href="#chart1">Chart 1</a></li>
 		<li><a href="#chart2">Chart 2</a></li>
 		<li><a href="#chart3">Chart 3</a></li>
 		<li><a href="#chart4">Chart 4</a></li>
