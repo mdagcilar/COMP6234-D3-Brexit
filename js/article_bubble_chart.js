@@ -4,15 +4,23 @@
  *  This js file is used to display the bubble chart of articles.
  */
 
-
-
-var w = window.innerWidth*0.90*0.95;
-var h = Math.ceil(w*0.70);
-var oR = 0;
-var nTop = 0;
-    
-var svgContainer = d3.select("#mainBubble")
+if(window.innerWidth > 1620){
+  var w = window.innerWidth*0.70*0.95;
+  var h = Math.ceil(w*0.70);
+  var oR = 0;
+  var nTop = 0;
+      
+  var svgContainer = d3.select("#mainBubble")
     .style("height", h+"px");
+} else {
+    var w = window.innerWidth*0.90*0.95;
+    var h = Math.ceil(w*0.70);
+    var oR = 0;
+    var nTop = 0;
+        
+    var svgContainer = d3.select("#mainBubble")
+        .style("height", h+"px");
+}
 
 
 
@@ -129,11 +137,11 @@ resetBubbles = function () {
            .attr("x", function(d,i) {return (oR*(3*(k+1)-1) + oR*1.5*Math.cos((i-1)*45/180*3.1415926));})
            .attr("y", function(d,i) {return ((h+oR)/3 +        oR*1.5*Math.sin((i-1)*45/180*3.1415926));})
            .attr("font-size", 10)
-           .style("opacity",0.5);
+           .style("opacity",0.65);
  
         t.selectAll(".childBubble" + k)
            .attr("r",  function(d) {return oR/3.0;})
-           .style("opacity",0.5)
+           .style("opacity",0.6)
            .attr("cx", function(d,i) {return (oR*(3*(k+1)-1) + oR*1.5*Math.cos((i-1)*45/180*3.1415926));})
            .attr("cy", function(d,i) {return ((h+oR)/3 +        oR*1.5*Math.sin((i-1)*45/180*3.1415926));});            
     }   
@@ -219,5 +227,3 @@ function activateBubble(d,i) {
                 }); 
         }                   
 }
-
-window.onresize = resetBubbles;
