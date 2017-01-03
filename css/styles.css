@@ -24,6 +24,7 @@ h2{
     font-weight:normal
 }
 
+
 body{
     font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
@@ -31,15 +32,10 @@ body{
 
 p{
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 25%;
     padding-right: 25%;
-}
-
-.storyline-container 
-{
-    margin: auto 0px;
 }
 
 #map{
@@ -92,3 +88,27 @@ p{
     width: 800px;
     height: 661px;
 }
+
+*/
+
+#mainBubble {
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    font: 10px sans-serif;
+    }
+             
+#mainBubble svg {
+    position: relative;
+    margin: 0; padding: 0;
+    margin-right: auto; margin-left: auto; 
+    }
+                         
+#mainBubble circle.topBubble {
+    fill: #aaa;
+    stroke: #666;
+    stroke-width: 1.5px;
+     }
+
+#chart1 {
+    margin-top: -8%;
+}
+
