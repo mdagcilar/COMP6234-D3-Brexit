@@ -30,6 +30,14 @@ body{
     text-align: center;
 }
 
+#intro{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
 p{
     text-align: center;
     padding-top: 10px;
@@ -98,8 +106,10 @@ p{
              
 #mainBubble svg {
     position: relative;
-    margin: 0; padding: 0;
-    margin-right: auto; margin-left: auto; 
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto; 
     }
                          
 #mainBubble circle.topBubble {
