@@ -3,7 +3,7 @@
  *
  *  This js file is used to display the bubble chart of articles.
  */
-
+(function(){
 if(window.innerWidth > 1620){
   var w = window.innerWidth*0.70*0.95;
   var h = Math.ceil(w*0.70);
@@ -227,3 +227,4 @@ function activateBubble(d,i) {
                 }); 
         }                   
 }
+})();

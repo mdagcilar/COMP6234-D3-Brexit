@@ -5,7 +5,7 @@
  */
 
 
-
+(function(){
 var margin = {top: 30, right: 60, bottom: 30, left: 60},
     width = 600 - margin.left - margin.right,
     height = 270 - margin.top - margin.bottom;
@@ -104,4 +104,4 @@ d3.csv("resources/retail_sales_2011.csv", function(error, data) {
     .style("stroke", "black")
     .style("stroke-width", 0.6)
 });
-
+})();
