@@ -1,9 +1,12 @@
 {"name":"bubble", "children": [
-{"name":"Retail Sales","description":"Atlas of Global Agriculture",
+{"name":"Retail Sales",
 "children":[
     {"name": "The Independent","address":"http://www.independent.co.uk/news/business/news/retail-sales-drop-at-fastest-rate-in-four-years-after-brexit-vote-reports-cbi-a7157816.html"},
-    {"name": "Crop Land","address":"http://d3js.org"},
-    {"name": "Crop Yields","address":"http://environment.umn.edu"}
+    {"name": "ibtimes","address":"http://www.ibtimes.co.uk/uk-retailers-suffer-biggest-sales-decline-four-years-after-brexit-vote-1572827"},
+    {"name": "Retailgazette","address":"http://www.retailgazette.co.uk/blog/2016/11/brexit-to-plunge-uk-retail-into-decline"},
+    {"name": "Wall Street Journal","address":"http://www.wsj.com/articles/u-k-retail-sales-decline-in-august-1473147229"},
+    {"name": "Forbes","address":"http://www.forbes.com/sites/timworstall/2016/06/10/uks-falling-retail-sales-not-about-brexit-but-amazon/#6b1371c72f87"}
+    
 ]},
 {"name": "Exports", "description": "Virtual Lab of Global Agriculture",
 "children":[
