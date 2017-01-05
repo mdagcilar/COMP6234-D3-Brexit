@@ -1,7 +1,7 @@
 (function(){
-      var margin = {top: 20, right: 55, bottom: 30, left: 40},
-          width  = 1000 - margin.left - margin.right,
-          height = 500  - margin.top  - margin.bottom;
+var margin = {top: 30, right: 60, bottom: 30, left: 60},
+    width = 600 - margin.left - margin.right,
+    height = 270 - margin.top - margin.bottom;
       var x = d3.scale.ordinal()
           .rangeRoundBands([0, width], .1);
       var y = d3.scale.linear()
@@ -18,7 +18,7 @@
           .y(function (d) { return y(d.value); });
       var color = d3.scale.ordinal()
           .range(["#0072e3 ","#548c00 "]);
-      var svg = d3.select("body").append("svg")
+      var svg = d3.select("#chart2").append("svg")
           .attr("width",  width  + margin.left + margin.right)
           .attr("height", height + margin.top  + margin.bottom+80)
         .append("g")
