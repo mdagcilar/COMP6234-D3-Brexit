@@ -49,6 +49,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis)
              .selectAll("text") 
+            .attr("font-size", 10)
             .style("text-anchor", "end")
             .attr("dx", "-.8em")
             .attr("dy", ".15em")
@@ -61,6 +62,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
             .call(yAxis)
 
           .append("text")
+            .attr("font-size", 10)
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
             .attr("dy", ".71em")
@@ -100,6 +102,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
             .style("fill", color)
             .style("stroke", "grey");
         legend.append("text")
+            .attr("font-size", 10)
             .attr("x", width - 12)
             .attr("y", 6)
             .attr("dy", ".35em")
