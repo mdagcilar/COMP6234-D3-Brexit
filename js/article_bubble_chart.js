@@ -28,7 +28,7 @@ var svg2 = d3.select("#mainBubble").append("svg")
     .attr("class", "mainBubbleSVG")
     .attr("width", w)
     .attr("height",h)
-    .on("mouseleave", function() {return resetBubbles();});
+    .on("mouseleave", function() { return resetBubbles();});
          
   
 //Reading in the json data
@@ -61,8 +61,7 @@ d3.json("resources/bubble.json", function(error, root) {
         .attr("cy", (h+oR)/3)
         .style("fill", function(d,i) { return colVals(i); }) //iterates over colVals 
         .style("opacity",0.4)
-        .on("mouseover", function(d,i) {return activateBubble(d,i);});
-        
+        .on("mouseover", function(d,i) {return activateBubble(d,i);});        
              
     bubbleObj.append("text")
         .attr("class", "topBubbleText")
@@ -84,19 +83,16 @@ d3.json("resources/bubble.json", function(error, root) {
                
          
         childBubbles.append("circle")
-                .attr("class", "childBubble" + iB)
-                .attr("id", function(d,i) {return "childBubble_" + iB + "sub_" + i;})
-                .attr("r",  function(d) {return oR/3.0;})
-                .attr("cx", function(d,i) {return (oR*(3*(iB+1)-1) + oR*1.5*Math.cos((i-1)*45/180*3.1415926));})
-                .attr("cy", function(d,i) {return ((h+oR)/3 +        oR*1.5*Math.sin((i-1)*45/180*3.1415926));})
-                .attr("cursor","pointer")
-                .style("opacity",0.6)
-                .style("fill", "#eee")
-                .on("click", function(d,i) {
-                    window.open(d.address);                 
-                })
-                .append("svg:title")
-                .text(function(d) { return d.address; });  
+            .attr("class", "childBubble" + iB)
+            .attr("id", function(d,i) {return "childBubble_" + iB + "sub_" + i;})
+            .attr("r",  function(d) {return oR/3.0;})
+            .attr("cx", function(d,i) {return (oR*(3*(iB+1)-1) + oR*1.5*Math.cos((i-1)*45/180*3.1415926));})
+            .attr("cy", function(d,i) {return ((h+oR)/3 +        oR*1.5*Math.sin((i-1)*45/180*3.1415926));})
+            .attr("cursor","pointer")
+            .style("opacity",0.6)
+            .style("fill", "#eee")
+            .append("svg:title")
+            .text(function(d) { return d.address; });  
 
         childBubbles.append("text")
             .attr("class", "childBubbleText" + iB)
@@ -109,15 +105,21 @@ d3.json("resources/bubble.json", function(error, root) {
             .attr("cursor","pointer")
             .attr("dominant-baseline", "middle")
             .attr("alignment-baseline", "middle")
-            .text(function(d) {return d.name})      
-            .on("click", function(d,i) {
-                window.open(d.address);
-            }); 
-     
+            .text(function(d) {return d.name});
     }
 }); 
+
+
+/*resetListeners = function(i){
+    //reset all listeners on small bubbles
+    d3.selectAll(".childBubbleText")
+        .on("click", null);
+    d3.selectAll(".childBubble")
+        .on("click", null);
+}*/
  
 resetBubbles = function () {
+
     var t = svg2.transition()
         .duration(650);
          
@@ -147,12 +149,14 @@ resetBubbles = function () {
     }   
 }
          
-         
+//enlarge a bubble when mousehover event is handled        
 function activateBubble(d,i) {
+    var thisBubble = i;
+
 // increase this bubble and decrease others
     var t = svg2.transition()
         .duration(650);   
-    
+
     t.selectAll(".topBubble")
         .attr("cx", function(d,ii){
 
@@ -225,6 +229,14 @@ function activateBubble(d,i) {
                 .style("opacity", function(){
                     return (k==i)?1:0;                  
                 }); 
-        }                   
+        }
+        d3.selectAll(".childBubbleText" + thisBubble)
+            .on("click", function(d, thisBubble){
+              window.open(d.address)
+        });
+        d3.selectAll(".childBubble" + thisBubble)
+            .on("click", function(d, thisBubble){
+              window.open(d.address)
+        });
 }
 })();
