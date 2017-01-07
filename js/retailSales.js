@@ -80,6 +80,7 @@
 
     svg.append("g")     // Add the right Y Axis
       .attr("class", "y axis")
+      .style("fill", "steelblue")
       .attr("transform", "translate(" + padding + ", 0)")
       .call(yAxisLeft);
 
@@ -117,7 +118,7 @@
     //brexit text
     svg.append("text")
       .attr("x", width*0.819)
-      .attr("y", padding - 10)
+      .attr("y", padding - 25)
       .text("Brexit");
 /*
     //x axis date end (Marking November 2016 on the bottom axis)
