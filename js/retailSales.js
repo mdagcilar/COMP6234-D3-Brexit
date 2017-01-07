@@ -11,6 +11,9 @@
       height = 440 - margin.top - margin.bottom;  //height of svg
       padding = 70;                               //padding around the chart, not including the labels
 
+  //format the date to 2012-06
+  var format = d3.time.format('%Y-%B');
+  
   var parseDate = d3.time.format("%b-%y").parse,
       bisectDateLeft = d3.bisector(function(d) { return d.date; }).left;
 
@@ -192,7 +195,11 @@
       .attr("x", -18)
       .attr("dy", 65);
 
+    var focusDate = svg.append("g")
+      .style("display", "none");
 
+    focusDate.append("text")
+      .attr("font-size", 14);
 
     svg.append("rect")
       .attr("class", "overlay")
@@ -206,11 +213,13 @@
     function setDisplaysNull(){
       focus.style("display", null);
       focus1.style("display", null);
+      focusDate.style("display", null);
     }
 
     function setDisplaysNone(){
       focus.style("display", "none");
       focus1.style("display", "none");
+      focusDate.style("display", "none");
     }
 
     function mousemove(){
@@ -237,13 +246,17 @@
           .attr("dy", 65);
       }
 
- 
+      //display steelblue circle on rect element
+      focus.attr("transform", "translate(" + x(d.date) + "," + y0(d.average_weekly_retailing) + ")");
+      focus.select("text").text(d.average_weekly_retailing);
 
-          focus.attr("transform", "translate(" + x(d.date) + "," + y0(d.average_weekly_retailing) + ")");
-          focus.select("text").text(d.average_weekly_retailing);
+      //display red circle on rect element
+      focus1.attr("transform", "translate(" + x(d.date) + "," + y1(d.average_weekly_internet_retailing) + ")");
+      focus1.select("text").text(d.average_weekly_internet_retailing);
 
-          focus1.attr("transform", "translate(" + x(d.date) + "," + y1(d.average_weekly_internet_retailing) + ")");
-          focus1.select("text").text(d.average_weekly_internet_retailing);
+      //display date on rect element
+      focusDate.attr("transform", "translate(" + (width/2 + 20) + "," + (height-(padding/3)) + ")");
+      focusDate.select("text").text("- (" + format(d.date) + ")");
     }
 
   });
