@@ -18,7 +18,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
           .y(function (d) { return y(d.value); });
       var color = d3.scale.ordinal()
           .range(["#f75000","#0072e3 ","#548c00 "]);
-      var svg = d3.select("#chart2").append("svg")
+      var svg = d3.select("#chart4").append("svg")
           .attr("width",  width  + margin.left + margin.right)
           .attr("height", height + margin.top  + margin.bottom+300)
         .append("g")
