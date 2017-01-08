@@ -151,14 +151,14 @@
         .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
         .attr("transform", "translate("+ (padding/7) +","+(height/2)+")rotate(-90)")  // text is drawn off the screen top left, move down and out and rotate
         .style("fill", "steelblue")
-        .text("Average Weekly Total Retailing (£ million)");
+        .text("Total Retailing (£ million)");
 
     // right y - axis label
     svg.append("text")
         .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
         .attr("transform", "translate("+ (width -padding/7) +","+(height/2)+")rotate(90)")  // text is drawn off the screen top left, move down and out and rotate
         .style("fill", "red")
-        .text("Average Weekly Internet Retailing (£ million)");
+        .text("Internet Retailing (£ million)");
 
     // x-axis label Date
     svg.append("text")
