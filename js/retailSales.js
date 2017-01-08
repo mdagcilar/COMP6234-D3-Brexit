@@ -138,12 +138,23 @@
       .attr("text-anchor", "middle")
       .text("Retail Sales");
 
-    // svg.append("text")
-    //   .attr("class", "title")
-    //   .attr("x", width/2)
-    //   .attr("y", 0 - (margin.top / 2))
-    //   .attr("text-anchor", "middle")
-    //   .text("Retail Sales");
+    //referencing the data set - 
+    //Author/Rightsholder. (Year). Title of data set (Version number) [Description of form]. Retrieved from http:// 
+
+    svg.append("text")
+      .attr("font-size", 10)
+      .attr("x", (padding*3.55))
+      .attr("y", (height+9))  
+      .attr("text-anchor", "middle")
+      .text("Office of National Statistics (ONS). (2016). Retail sales in Great Britain (Nov 2016)");
+
+    svg.append("text")
+      .attr("font-size", 10)
+      .attr("x", (padding*4.69))
+      .attr("y", (height+20))  
+      .attr("text-anchor", "middle")
+      .text("Retrieved from https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/previousReleases");
+
 
     // axis titles 
     // left y - axis label
