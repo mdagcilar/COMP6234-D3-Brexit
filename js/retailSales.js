@@ -150,7 +150,7 @@
 
     svg.append("text")
       .attr("font-size", 10)
-      .attr("x", (padding*4.69))
+      .attr("x", (padding*4.64))
       .attr("y", (height+20))  
       .attr("text-anchor", "middle")
       .text("Retrieved from https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/previousReleases");
