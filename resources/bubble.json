@@ -8,29 +8,26 @@
     {"name": "Forbes","address":"http://www.forbes.com/sites/timworstall/2016/06/10/uks-falling-retail-sales-not-about-brexit-but-amazon/#6b1371c72f87"}
     
 ]},
-{"name": "Exports", "description": "Virtual Lab of Global Agriculture",
+{"name": "Exports",
 "children":[
     {"name":"Excess Nutrient","address":"http://d3js.org"},
     {"name":"Yield Gap","address":"http://d3js.org"},
     {"name":"Fertilizer","address":"http://sunsp.net"}
 ]},
-{"name":"House Prices", "description":"Profiles of Country",
+{"name":"House Prices",
 "children":[
     {"name":"Huffington Post","address":"http://www.huffingtonpost.co.uk/entry/george-osborne-brexit-house-prices_uk_573f3046e4b0e71ef36d2575"},
     {"name":"The Guardian","address":"https://www.theguardian.com/politics/2016/may/20/eu-referendum-george-osborne-house-prices-brexit"},
     {"name":"The Financial Times","address":"https://www.ft.com/content/5e560a76-1ea6-11e6-b286-cddde55ca122"}
 ]},
-{"name":"Unemployment", "description":"Crop Data in 5 minutes grid",
+{"name":"Unemployment",
 "children":[
-<<<<<<< Updated upstream
-=======
     {"name":"HM Government","address":"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/524967/hm_treasury_analysis_the_immediate_economic_impact_of_leaving_the_eu_web.pdf"},
     {"name":"The Independent","address":"http://www.independent.co.uk/news/business/news/brexit-impact-recession-eu-referendum-credit-suisse-employment-job-hiring-a7136541.html"},
     {"name":"businessinsider","address":"http://uk.businessinsider.com/credit-suisse-impact-of-brexit-on-uk-unemployment-2016-7"}
 ]},
-{"name":"Wage Growth", "description":"sa",
+{"name":"Wage Growth",
 "children":[
->>>>>>> Stashed changes
     {"name":"Geography","address":"http://www.earthstat.org/"},
     {"name":"Crop Land","address":"http://www.earthstat.org/"},
     {"name":"Crop Yields","address":"http://www.earthstat.org/"}
