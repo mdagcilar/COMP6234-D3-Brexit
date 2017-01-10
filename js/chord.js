@@ -174,7 +174,7 @@ var middleTextTop = textCenter.append("text")
 	.attr("y", -24*10/2 + "px")
 	.attr("dy", "1em")
 	.attr("opacity", 1)
-	.text("BLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAH")
+	.text("")
 	.call(wrap, 350);
 
 /*Starting text middle bottom*/
@@ -185,7 +185,7 @@ var middleTextBottom = textCenter.append("text")
 	.attr("y", 24*3/2 + "px")
 	.attr("dy", "1em")
 	.attr('opacity', 1)
-	.text("BLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAH")
+	.text("")
 	.call(wrap, 350);
 
 
@@ -227,18 +227,17 @@ function Draw(){
 	/*Show and run the progressBar*/
 	runProgressBar(time=1000*11);
 		
-	changeTopText(newText = "BLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAH. " + 
-							"BLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAH...",
+	changeTopText(newText = "Apart from the clear drop in value of sterling, the UK economy has remained stable throughout the inital shock of the vote.",
 	loc = 4/2, delayDisappear = 0, delayAppear = 1);
 
-	changeTopText(newText = "AGAIN BLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAH ",
+	changeTopText(newText = "Brexit has yet to take a real national effect over the economical issues",
 	loc = 8/2, delayDisappear = 9, delayAppear = 10, finalText = true);
 	
-	changeBottomText(newText = "THEN AGAIN BLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHBLAH BLAH BLAHs ",
+	changeBottomText(newText = "The true aftermath is yet to unfold and potentially will do in the following months to come",
 	loc = 1/2, delayDisappear = 0, delayAppear = 10);
 	
 	d3.select("#clicker")
-		.style("visibility", "hidden");
+		.style("visibility", "visible");
 
 	//Remove arcs again
 	d3.selectAll(".arc")
