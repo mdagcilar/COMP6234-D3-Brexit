@@ -40,6 +40,15 @@ function init(width, height) {
         .attr("width", width)
         .attr("height", height);
 
+    svg5.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 20)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+     // .attr("y", 0 - (margin.top / 2))
+      .attr("text-anchor", "middle")
+      .text("Retail Sales");
+
     g5 = svg5.append("g");
 
     g5.append("rect")
@@ -49,6 +58,7 @@ function init(width, height) {
         .attr("height", height)
         .style("fill", "#fff")
         .on('click', deselect);
+
 }
 
 //Table for values
