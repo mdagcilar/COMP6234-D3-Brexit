@@ -25,11 +25,5 @@
     {"name":"Geography","address":"http://www.earthstat.org/"},
     {"name":"Crop Land","address":"http://www.earthstat.org/"},
     {"name":"Crop Yields","address":"http://www.earthstat.org/"}
-]},
-{"name":"Wage Growth", "description":"sa",
-"children":[
-    {"name":"Geography","address":"http://www.earthstat.org/"},
-    {"name":"Crop Land","address":"http://www.earthstat.org/"},
-    {"name":"Crop Yields","address":"http://www.earthstat.org/"}
 ]}
 ]}
