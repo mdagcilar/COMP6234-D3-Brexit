@@ -5,7 +5,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
       var x = d3.scale.ordinal()
           .rangeRoundBands([0, width], .1);
       var y = d3.scale.linear()
-          .rangeRound([height, 0]);
+          .rangeRound([height+50, 50]);
       var xAxis = d3.svg.axis()
           .scale(x)
           .orient("bottom");
@@ -20,7 +20,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
           .range(["#0072e3 ","#548c00 "]);
       var svg = d3.select("#chart2").append("svg")
           .attr("width",  width  + margin.left + margin.right)
-          .attr("height", height + margin.top  + margin.bottom+80)
+          .attr("height", height + margin.top  + margin.bottom+130)
         .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
       d3.csv("resources/oil.csv", function (error, data) {
@@ -46,7 +46,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
         ]);
         svg.append("g")
             .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
+            .attr("transform", "translate(0," + (height+50)+ ")")
             .call(xAxis)
             .selectAll("text") 
             .style("text-anchor", "end")
@@ -54,6 +54,33 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
             .attr("dy", ".15em")
             .attr("transform", function(d) {
                 return "rotate(-65)" });
+            
+             svg.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 20)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+      .attr("y", 0 - (margin.top /2) )
+      .attr("text-anchor", "middle")
+      .text("Balance on UK trade in oil, September 2014 to September 2016");
+
+      svg.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 8)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+      .attr("y", height +150   )
+      .attr("text-anchor", "middle")
+      .text("Office of National Statistics (ONS). (2016). UK Trade (Oct 2016)"); 
+
+      svg.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 8)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+      .attr("y", height +160   )
+      .attr("text-anchor", "middle")
+      .text("Retrieved from https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/bulletins/uktrade/previousReleases"); 
 
         svg.append("g")
             .attr("class", "y axis")
@@ -61,6 +88,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
           .append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
+            .attr("x", -40)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("£ billion, seasonlly adjust");
@@ -95,11 +123,12 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
             .attr("x", width - 10)
             .attr("width", 10)
             .attr("height", 10)
+            .attr("y", 10)
             .style("fill", color)
             .style("stroke", "grey");
         legend.append("text")
             .attr("x", width - 12)
-            .attr("y", 6)
+            .attr("y", 15)
             .attr("dy", ".35em")
             .style("text-anchor", "end")
             .text(function (d) { return d; });

@@ -5,7 +5,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
       var x = d3.scale.ordinal()
           .rangeRoundBands([0, width], .1);
       var y = d3.scale.linear()
-          .rangeRound([height, 0]);
+          .rangeRound([height+50,50]);
       var xAxis = d3.svg.axis()
           .scale(x)
           .orient("bottom");
@@ -20,7 +20,7 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
           .range(["#f75000","#0072e3 ","#548c00 "]);
       var svg = d3.select("#chart4").append("svg")
           .attr("width",  width  + margin.left + margin.right)
-          .attr("height", height + margin.top  + margin.bottom+300)
+          .attr("height", height + margin.top  + margin.bottom+150)
         .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
       d3.csv("resources/data_unemp.csv", function (error, data) {
@@ -46,9 +46,9 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
         ]);
         svg.append("g")
             .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
+            .attr("transform", "translate(0," + (height+50)+ ")")
             .call(xAxis)
-             .selectAll("text") 
+            .selectAll("text") 
             .attr("font-size", 10)
             .style("text-anchor", "end")
             .attr("dx", "-.8em")
@@ -56,15 +56,45 @@ var margin = {top: 30, right: 60, bottom: 30, left: 60},
             .attr("transform", function(d) {
                 return "rotate(-65)" });
 
+            svg.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 20)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+      .attr("y", 0 - (margin.top /2) )
+      .attr("text-anchor", "middle")
+      .text("UK unemployment rates (aged 16 and over), seasonally adjusted");
+
+      svg.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 8)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+      .attr("y", height +140   )
+      .attr("text-anchor", "middle")
+      .text("Office of National Statistics (ONS). (2016). UK Labour Market (Nov 2016)");
+
+
+      svg.append("text")
+      .attr("class", "retailSaleTitle")
+      .attr("font-size", 8)
+      .attr("font-family", "arial")
+      .attr("x", width/2)
+      .attr("y", height +150   )
+      .attr("text-anchor", "middle")
+      .text("Retrieved from https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases");
+
         
         svg.append("g")
             .attr("class", "y axis")
             .call(yAxis)
 
+
           .append("text")
             .attr("font-size", 10)
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
+            .attr("x", -40)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("％ of All economically active");
