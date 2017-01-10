@@ -36,7 +36,7 @@ function init(width, height) {
     path = d3.geo.path()
         .projection(projection);
 
-    svg5 = d3.select("#chart3").append("svg")
+    svg5 = d3.select("#map").append("svg")
         .attr("width", width)
         .attr("height", height);
 
