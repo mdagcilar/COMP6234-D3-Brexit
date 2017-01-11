@@ -26,10 +26,10 @@
     {"name":"The Independent","address":"http://www.independent.co.uk/news/business/news/brexit-impact-recession-eu-referendum-credit-suisse-employment-job-hiring-a7136541.html"},
     {"name":"businessinsider","address":"http://uk.businessinsider.com/credit-suisse-impact-of-brexit-on-uk-unemployment-2016-7"}
 ]},
-{"name":"Wage Growth",
+/*{"name":"Wage Growth",
 "children":[
     {"name":"Geography","address":"http://www.earthstat.org/"},
     {"name":"Crop Land","address":"http://www.earthstat.org/"},
     {"name":"Crop Yields","address":"http://www.earthstat.org/"}
-]}
+]}*/
 ]}
