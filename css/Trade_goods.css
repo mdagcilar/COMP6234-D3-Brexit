@@ -1,0 +1,32 @@
+body { font: 12px Arial;}
+
+path {
+	stroke: steelblue;
+	stroke-width: 2;
+	fill: none;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}.line:nth-child(1){
+            stroke-dasharray:1000;
+            stroke-dashoffset:1000;
+
+            animation: dash 10s infinite;
+    } /*animation*/
+      @keyframes dash {<span style="white-space:pre"></span>
+            0%{
+                 stroke-dashoffset:1000 ;
+                }
+
+                50%{
+                     stroke-dashoffset: -1000;
+                    }
+              100%{
+                stroke-dashoffset:1000;
+              }
+        }
