@@ -25,11 +25,5 @@
     {"name":"HM Government","address":"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/524967/hm_treasury_analysis_the_immediate_economic_impact_of_leaving_the_eu_web.pdf"},
     {"name":"The Independent","address":"http://www.independent.co.uk/news/business/news/brexit-impact-recession-eu-referendum-credit-suisse-employment-job-hiring-a7136541.html"},
     {"name":"businessinsider","address":"http://uk.businessinsider.com/credit-suisse-impact-of-brexit-on-uk-unemployment-2016-7"}
-]},
-/*{"name":"Wage Growth",
-"children":[
-    {"name":"Geography","address":"http://www.earthstat.org/"},
-    {"name":"Crop Land","address":"http://www.earthstat.org/"},
-    {"name":"Crop Yields","address":"http://www.earthstat.org/"}
-]}*/
+]}
 ]}

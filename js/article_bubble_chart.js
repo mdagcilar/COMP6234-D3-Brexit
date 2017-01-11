@@ -8,7 +8,7 @@ if(window.innerWidth > 1620){
   var w = window.innerWidth*0.70*0.95;
   var h = Math.ceil(w*0.42);
   var oR = 0;
-  var nTop = 0;
+  var nTop = 1;
       
   var svgContainer = d3.select("#mainBubble")
     .style("height", h+"px");
